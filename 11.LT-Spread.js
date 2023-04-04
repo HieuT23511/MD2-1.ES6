@@ -16,8 +16,8 @@
 
 //Ham3:
     let customerOrder = []
-function recordOrders(time) {
-    customerOrder.push({time, birds: Array.prototype.slice.call(arguments, 1)})
+function recordOrders(time, ...bird) {
+    customerOrder.push({time,bird})
 }
-recordOrders(new Date, "coffee", "yaourt", "pizza")
+recordOrders(new Date, "coffee", "yogurt", "pizza")
 console.log(customerOrder)
